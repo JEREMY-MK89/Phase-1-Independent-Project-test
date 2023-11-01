@@ -89,3 +89,32 @@
 
 }
   
+.container {
+    background-color: #a78927;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 100vh;
+  }
+    
+  
+  form {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 60%;
+    max-width: 600px;
+    border-radius: 10px;
+    
+  }
+  
+  
+  form h2 {
+    text-align: center;
+    color: #a78927;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 10px #ffee00;
+    font-style:bold italic;
+  }
