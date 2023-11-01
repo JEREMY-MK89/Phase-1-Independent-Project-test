@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     const baseUrl = "http://localhost:3000";
     console.log("API base URL:", baseUrl);
-
-        ////Navbar EVENT LISTENERS 
+///The bASEuRL,the DomContentLoaded Eventlistener to show that the Dom is Loaded//
+        ////Navbar EVENT LISTENERS making them  not need to persist after reloading the page.//
 
         const homeLink = document.getElementById('homeLink');
         const galleryLink = document.getElementById('galleryLink');
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     
     })
-
+///to make the selection empty on seleting a court name on the courts///
     function hideOptions() {
         const selectElement = document.getElementById('court');
         const selectedValue = selectElement.value;
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     }
-  // Code that executes on form submission
+  // Code that executes on form submission that is on clicking send(eventListeners) the message to show too//
     const form = document.getElementById('contact-form');
     const sendButton = document.getElementById('sendButton');
 
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function showPopup() {
-        alert('Your message has been sent!');
+        alert('Your message has been  we value your feedback!');
     }
 
     function postToApi(data) {
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(result => {
                 console.log("Sentiment Analysis Result:", result);
 
-                ///accessing the  the sentiment data using result.result.label and result.result.score
+                ///Displaying the posted information/the fetched Public Api data by accessing the  the sentiment data using result.result.label and result.result.score/delete buttons
                 const structuredData = {
                     ...data,
                     sentiment: result.result.label,
@@ -104,15 +104,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 for (const [key, value] of Object.entries(structuredData)) {
                     const listItem = document.createElement('li');
+                    const deleteButton = document.createElement('button'); // Create the delete button
+                    deleteButton.textContent = 'Delete';
+                    deleteButton.addEventListener('click', () => {
+                      listItem.remove(); // Remove the list item when the delete button is clicked
+                    });
                     listItem.textContent = `${key}: ${value}`;
+                    listItem.appendChild(deleteButton); // Append the delete button to the list item
                     resultList.appendChild(listItem);
-                }
+                  }
             })
             .catch(error => {
                 console.error(error);
             });
     }
-    // Rest of your code...
+    // the social Media links making them  not need to persist after reloading the page.//
 
     const youtubeLink = document.getElementById('youtubeLink');
     const facebookLink = document.getElementById('facebookLink');
@@ -120,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const helpLink = document.getElementById('helpLink');
     const socialMediaContentDiv = document.getElementById('socialMediaContent');
 
-    // Your event listeners for youtubeLink, facebookLink, twitterLink, and helpLink
+    // The event listeners for youtubeLink, facebookLink, twitterLink, and helpLink
 
     function loadContent(page) {
         const contentDiv = document.getElementById('content');
