@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     }
-  // Code that executes on form submission that is on clicking send(eventListeners) the message to show too//
+  // Code that executes(Variables with stored reference in the element by IDS) on form submission that is on clicking send(eventListeners) the message to show too form the input fields//
     const form = document.getElementById('contact-form');
     const sendButton = document.getElementById('sendButton');
 
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function showPopup() {
         alert('Your message has been  we value your feedback!');
     }
-
+///Communicating with the server using Public Api key// 
     function postToApi(data) {
         const url = 'https://sentiment-analysis40.p.rapidapi.com/api/sentiment';
         const options = {
@@ -106,11 +106,12 @@ document.addEventListener('DOMContentLoaded', function () {
                     const listItem = document.createElement('li');
                     const deleteButton = document.createElement('button'); // Create the delete button
                     deleteButton.textContent = 'Delete';
+                    deleteButton.style.backgroundColor = '#f44336'; // styling the dynamically added delete button Red
                     deleteButton.addEventListener('click', () => {
                       listItem.remove(); // Remove the list item when the delete button is clicked
                     });
                     listItem.textContent = `${key}: ${value}`;
-                    listItem.appendChild(deleteButton); // Append the delete button to the list item
+                    listItem.appendChild(deleteButton); // Appending the delete button to the list item
                     resultList.appendChild(listItem);
                   }
             })
@@ -118,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.error(error);
             });
     }
-    // the social Media links making them  not need to persist after reloading the page.//
+    // the social Media links variables stored inn references by the Elements by IDS, making them  not need to persist after reloading the page.//
 
     const youtubeLink = document.getElementById('youtubeLink');
     const facebookLink = document.getElementById('facebookLink');
