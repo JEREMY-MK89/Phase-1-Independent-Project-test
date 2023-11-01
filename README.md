@@ -16,9 +16,9 @@ The MVP:_1.Users can get the information about the Court(Courts available in the
 - [License](#license)
 
 ## Description
-This project is a basic web application built with Node.js and Express.js that allows users to register, log in, and manage their accounts. It includes features such as user authentication, profile customization, and basic account management.
 This project is a basic web application built with Node.js and Express.js that allows users to give or air their sentiments/opinions in a customer feedback message or  review  (be it positive or negative) by  writing their message and  submitting it to the receiving organization.
 With the Sentiment Analysis service, you will get to know the users (be it clients, employees or partners) better and it will be easier to engage with them (knowing how they feel).
+
 
 ## Installation
 
@@ -35,11 +35,11 @@ a.npm install -g json-server-to install the g json-server
 b.json-server --watch db.json to see if the we are communicating with server through 200 to 300 codes/ 400 to 500 for errors.
 The top-level keys exist in your `db.json` file will determine 
 The routes available will be the ones used in my top level keys for the `json-server` will generate the routes e.g 
-- `GET / `customers’
-- `POST / customers `
-- `GET / customers /:id`
-- `PATCH / customers /:id`
-- `DELETE / customers /:id`
+- `GET / `postToAPI’
+- `POST / 'postToAPI `
+- `GET /postToAPI /:id`
+- `PATCH /postToAPI/:id`
+- `DELETE /postToAPI /:id`
 
 ## Contributing
 
@@ -51,5 +51,6 @@ This project is licensed under the :-
 a https://github.com/FS-Moringa/phase-1-static-methods-lab and
 b 'https://sentiment-analysis40.p.rapidapi.com/api/sentiment';
 
-## Moses Kingi
+## Author
+Moses Kingi
 
