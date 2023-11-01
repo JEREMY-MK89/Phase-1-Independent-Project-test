@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 </head>
+<body>
+
 <nav class="navbar">
     <div class="left">
         <img class="mkd-normal-logo" src="https://judiciary.go.ke/wp-content/uploads/2023/07/logo1-Copy-Copy.png" alt="logo">
@@ -34,7 +36,22 @@
         <input type="email" id="email" placeholder="Enter Your Email" required>
         <input type="tel" id="phone" placeholder="Enter Your Phone Number" required>    
 
-<body>
+          <!-- The options for our different courts to select from and express sentiment -->
+
+        <select id="court" name="court" onchange="hideOptions()">
+            <option value="Nairobi">Nairobi</option>
+            <option value="Mombasa">Mombasa</option>
+            <option value="Kisumu">Kisumu</option>
+            <option value="Nyeri">Nyeri ELRC</option>
+            <option value="Nakuru">Nakuru ELRC</option>
+            <option value="Kakamega">Kakamega ELRC</option>
+            <option value="Kericho">Kericho ELRC</option>
+            <option value="Eldoret">Eldoret ELRC</option>
+            <option value="Malindi">Malindi ELRC</option>
+            <option value="Bungoma">Bungoma ELRC</option>
+        </select>        
+        
+
     
 </body>
 </html>
