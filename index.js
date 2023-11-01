@@ -68,3 +68,21 @@ sendButton.addEventListener('click', function (event) {
     function showPopup() {
         alert('Your message has been sent!');
     }
+
+    ///making an asynchronous request to the server or Public API to post data with the key
+
+    function postToApi(data) {
+        const url = 'https://sentiment-analysis40.p.rapidapi.com/api/sentiment';
+        const options = {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+                'X-RapidAPI-Key': '989cc5d3d5msh893be13c94e2f79p156b4cjsn100fd12716d6',
+                'X-RapidAPI-Host': 'sentiment-analysis40.p.rapidapi.com',
+            },
+            body: JSON.stringify({
+                language: 'en',
+                text: document.getElementById('message').value
+            })
+        };
+    }
