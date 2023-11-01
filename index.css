@@ -8,6 +8,16 @@
     background-size: cover;
   }
 
+  .mkd-normal-logo{
+    float: left;
+    width: 150px; 
+    height: auto; }
+
+    .mkd-normal-logo:hover{
+        transform: scale(1.2);
+        color:#a78927;
+        }
+        
 //NAVBAR CSS
 
   .navbar {
@@ -165,3 +175,27 @@ form input, textarea {
     color: white;
   }
   
+///The Output/displayed sentiments css and numbered
+
+/* Defining the counter */
+#result-list {
+  counter-reset: my-counter;
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style for the list items */
+#result-list li {
+  counter-increment: my-counter;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+/* Style for the counter */
+#result-list li::before {
+  content: counter(my-counter) ". ";
+  font-weight: bold;
+  margin-right: 10px;
+}
