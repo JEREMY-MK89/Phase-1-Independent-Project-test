@@ -175,6 +175,17 @@ form input, textarea {
     color: white;
   }
   
+
+
+
+   h3 {
+    text-align: center;
+    color: #a78927;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 10px #ffee00;
+    font-style:bold italic;
+  }
+
 ///The Output/displayed sentiments css and numbered
 
 /* Defining the counter */
@@ -199,3 +210,79 @@ form input, textarea {
   font-weight: bold;
   margin-right: 10px;
 }
+
+
+////BOTTOM FORM SOCIAL MEDIA CSS
+  
+  #footer {
+      margin: 6px;
+      
+      padding: 15px;
+      padding-top: 150px;
+      text-shadow:3px 3px 10px #5eff00;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  
+  .center-text {
+      text-align: center;
+  }
+  .copyright {
+      display: inline-block;
+      font-weight: bold;
+      color: #a78927;
+      text-shadow: 3px 3px 10px #ffee00;
+  }
+  
+  
+  #footer a:hover{
+      color: #a78927;
+      background-color:black;
+     
+  }
+  
+  
+  
+  
+  #footer  ul {
+   padding: 5px;
+   list-style-type: none;
+   text-align: center;
+   list-style-type: none;
+   padding: 0;
+   
+     
+  }
+  
+  #footer  ul li {
+      display: inline;
+      list-style-type: none;
+      padding: 0;
+        
+     }
+  
+     #footer  ul li a {
+      text-decoration: none;
+      font-family: "Poppins", sans-serif;
+      padding: 2em 1em;
+      color:black
+      text-shadow:3px 3px 10px black;
+      position: relative;
+        
+     }
+  
+  
+     #footer  ul li a:hover {
+   color:#a78927;
+      background-color:#daeecb;
+      transform: scale(1.3);
+  }
+  
+  
+  #footer ul li a i {
+    transition: transform 0.3s;
+  }
+  
