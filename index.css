@@ -1,14 +1,86 @@
 {
-    margin: 0px;
-    padding: 0px;
-    font-family: "Poppins", sans-serif;
-    background-image: url('Downloads/background image to use.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins", sans-serif;
+}
 
-  .mkd-normal-logo{
+.container {
+  background-color: #a78927;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 100vh;
+}
+  
+
+form {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 2vw 4vw;
+  width: 60%;
+  max-width: 600px;
+  border-radius: 10px;
+  
+}
+
+
+
+
+
+form h2 {
+  text-align: center;
+  color: #a78927;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 10px #ffee00;
+  font-style:bold italic;
+}
+
+form input, textarea {
+  border: 0;
+  margin: 10px 0px;
+  padding: 20px;
+  outline: none;
+  background: #01233E;
+  font-size: 16px;
+  border-radius: 10px;
+  resize: none;
+  color: #fff;
+}
+
+
+form button {
+  background: white;
+  color: #e65b00;
+  border: 1px solid #a78927;
+  padding: 15px;
+  font-size: 1rem;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+  margin: 20px auto 0;
+  border-radius: 30px;
+  transition: all .5s ease-in;
+}
+
+form button:hover {
+  border: 1px solid #a78927;
+  background:  #01233E;
+  color: white;
+}
+
+
+////NAV BAR CSS
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+}
+.mkd-normal-logo{
     float: left;
     width: 150px; 
     height: auto; }
@@ -18,9 +90,8 @@
         color:#a78927;
         }
         
-//NAVBAR CSS
 
-  .navbar {
+.navbar {
     background-color: #01233E;
     display: flex;
     justify-content: space-around;
@@ -98,38 +169,9 @@
     }
 
 }
-  
-.container {
-    background-color: #a78927;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    height: 100vh;
-  }
-    
-  
-  form {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    padding: 2vw 4vw;
-    width: 60%;
-    max-width: 600px;
-    border-radius: 10px;
-    
-  }
-  
-  
-  form h2 {
-    text-align: center;
-    color: #a78927;
-    margin-bottom: 20px;
-    text-shadow: 3px 3px 10px #ffee00;
-    font-style:bold italic;
-  }
 
-  #court{
+
+#court{
     border: 0;
     margin: 10px 0px;
     padding: 20px;
@@ -141,52 +183,83 @@
     color:whitesmoke;
 }
 
-form input, textarea {
-    border: 0;
-    margin: 10px 0px;
-    padding: 20px;
-    outline: none;
-    background: #01233E;
-    font-size: 16px;
-    border-radius: 10px;
-    resize: none;
-    color: #fff;
-  }
+
+
   
-  
-  form button {
-    background: white;
-    color: #e65b00;
-    border: 1px solid #a78927;
+
+////BOTTOM FORM SOCIAL MEDIA CSS
+
+#footer {
+    margin: 6px;
+    
     padding: 15px;
-    font-size: 1rem;
-    outline: none;
-    cursor: pointer;
-    width: 100%;
-    font-weight: bold;
-    margin: 20px auto 0;
-    border-radius: 30px;
-    transition: all .5s ease-in;
-  }
-  
-  form button:hover {
-    border: 1px solid #a78927;
-    background:  #01233E;
-    color: white;
-  }
-  
+    padding-top: 150px;
+    text-shadow:3px 3px 10px #5eff00;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
 
-
-   h3 {
+.center-text {
     text-align: center;
+}
+.copyright {
+    display: inline-block;
+    font-weight: bold;
     color: #a78927;
-    margin-bottom: 20px;
     text-shadow: 3px 3px 10px #ffee00;
-    font-style:bold italic;
-  }
+}
 
-///The Output/displayed sentiments css and numbered
+
+#footer a:hover{
+    color: #a78927;
+    background-color:black;
+   
+}
+
+
+
+
+#footer  ul {
+ padding: 5px;
+ list-style-type: none;
+ text-align: center;
+ list-style-type: none;
+ padding: 0;
+ 
+   
+}
+
+#footer  ul li {
+    display: inline;
+    list-style-type: none;
+    padding: 0;
+      
+   }
+
+   #footer  ul li a {
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    padding: 2em 1em;
+    color:black
+    text-shadow:3px 3px 10px black;
+    position: relative;
+      
+   }
+
+
+   #footer  ul li a:hover {
+ color:#a78927;
+    background-color:#daeecb;
+    transform: scale(1.3);
+}
+
+
+#footer ul li a i {
+  transition: transform 0.3s;
+}
 
 /* Defining the counter */
 #result-list {
@@ -210,79 +283,3 @@ form input, textarea {
   font-weight: bold;
   margin-right: 10px;
 }
-
-
-////BOTTOM FORM SOCIAL MEDIA CSS
-  
-  #footer {
-      margin: 6px;
-      
-      padding: 15px;
-      padding-top: 150px;
-      text-shadow:3px 3px 10px #5eff00;
-      display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  
-  .center-text {
-      text-align: center;
-  }
-  .copyright {
-      display: inline-block;
-      font-weight: bold;
-      color: #a78927;
-      text-shadow: 3px 3px 10px #ffee00;
-  }
-  
-  
-  #footer a:hover{
-      color: #a78927;
-      background-color:black;
-     
-  }
-  
-  
-  
-  
-  #footer  ul {
-   padding: 5px;
-   list-style-type: none;
-   text-align: center;
-   list-style-type: none;
-   padding: 0;
-   
-     
-  }
-  
-  #footer  ul li {
-      display: inline;
-      list-style-type: none;
-      padding: 0;
-        
-     }
-  
-     #footer  ul li a {
-      text-decoration: none;
-      font-family: "Poppins", sans-serif;
-      padding: 2em 1em;
-      color:black
-      text-shadow:3px 3px 10px black;
-      position: relative;
-        
-     }
-  
-  
-     #footer  ul li a:hover {
-   color:#a78927;
-      background-color:#daeecb;
-      transform: scale(1.3);
-  }
-  
-  
-  #footer ul li a i {
-    transition: transform 0.3s;
-  }
-  
