@@ -4,6 +4,7 @@
   font-family: "Poppins", sans-serif;
 }
 
+
 .container {
   background-color: #a78927;
   display: flex;
@@ -262,6 +263,13 @@ form button:hover {
   counter-reset: my-counter;
   list-style-type: none;
   padding: 0;
+  border: 0;
+  margin: 10px 0px;
+  padding: 20px;
+  outline: none;
+  font-size: 16px;
+  border-radius: 10px;
+  resize: none;
 }
 
 /* Style for the list items */
@@ -278,4 +286,13 @@ form button:hover {
   content: counter(my-counter) ". ";
   font-weight: bold;
   margin-right: 10px;
+}
+
+h3 {
+  text-align: center;
+  color: #a78927;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 10px #ffee00;
+  font-style:bold italic;
+  text-align: center;
 }
