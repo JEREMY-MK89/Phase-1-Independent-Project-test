@@ -131,3 +131,37 @@
     color:whitesmoke;
 }
 
+form input, textarea {
+    border: 0;
+    margin: 10px 0px;
+    padding: 20px;
+    outline: none;
+    background: #01233E;
+    font-size: 16px;
+    border-radius: 10px;
+    resize: none;
+    color: #fff;
+  }
+  
+  
+  form button {
+    background: white;
+    color: #e65b00;
+    border: 1px solid #a78927;
+    padding: 15px;
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    margin: 20px auto 0;
+    border-radius: 30px;
+    transition: all .5s ease-in;
+  }
+  
+  form button:hover {
+    border: 1px solid #a78927;
+    background:  #01233E;
+    color: white;
+  }
+  
