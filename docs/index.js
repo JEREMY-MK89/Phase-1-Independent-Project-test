@@ -2,6 +2,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const baseUrl = "http://localhost:3000";
     console.log("API base URL:", baseUrl);
 
+
+    ///The bASEuRL,the DomContentLoaded Eventlistener to show that the Dom is Loaded//
+        ////Navbar EVENT LISTENERS making them  not need to persist after reloading the page.//
+
     const homeLink = document.getElementById('homeLink');
     const galleryLink = document.getElementById('galleryLink');
     const servicesLink = document.getElementById('servicesLink');
@@ -34,16 +38,22 @@ document.addEventListener('DOMContentLoaded', function () {
         contentDiv.innerHTML = `Contact Us button under maintenance!!`;
     });
 
+    ///to make the selection empty on seleting a court name on the courts///
+
     function hideOptions() {
-        const selectElement = document.getElementById('court');
-        const selectedValue = selectElement.value;
-        for (let i = 0; i < selectElement.options.length; i++) {
-            if (selectElement.options[i].value !== selectedValue) {
-                selectElement.options[i].style.display = 'none';
-            }
+    const selectElement = document.getElementById('court');
+    const selectedValue = selectElement.value;
+    for (let i = 0; i < selectElement.options.length; i++) {
+        if (selectElement.options[i].value !== selectedValue) {
+            selectElement.options[i].style.display = 'none';
+        } else {
+            selectElement.options[i].style.display = 'block';
         }
     }
+}
 
+
+      // Code that executes(Variables with stored reference in the element by IDS) on form submission that is on clicking send(eventListeners) the message to show too form the input fields//
     const form = document.getElementById('contact-form');
     const sendButton = document.getElementById('sendButton');
 
@@ -64,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
         showPopup();
     });
 
+    ///Communicating with the server using Public Api key// 
     function showPopup() {
         alert('Your message has been sent. We value your feedback!');
     }
@@ -94,7 +105,10 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     }
 
-    function handleSentiments(data, result) {
+
+///Displaying the posted information/the fetched Public Api data by accessing the  the sentiment data using result.result.label and result.result.score/delete buttons
+    
+function handleSentiments(data, result) {
         const structuredData = {
             ...data,
             sentiment: result.result.label,
@@ -116,9 +130,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 listItem.remove();
             });
             listItem.textContent = `${key}: ${value}`;
-            listItem.appendChild(deleteButton);
+            listItem.appendChild(deleteButton);// Appending the delete button to the list item
             resultList.appendChild(listItem);
 
+///Displaying the messega on the website for decision making and taking action//
             if (value === 'positive') {
                 const positiveItem = document.createElement('li');
                 positiveItem.textContent = key;
@@ -132,6 +147,8 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     }
+
+// the social Media links variables stored inn references by the Elements by IDS, making them  not need to persist after reloading the page.//
 
     const youtubeLink = document.getElementById('youtubeLink');
     const facebookLink = document.getElementById('facebookLink');
@@ -154,14 +171,16 @@ document.addEventListener('DOMContentLoaded', function () {
         loadSocialMedia('Help');
     });
 
+        // The event listeners for youtubeLink, facebookLink, twitterLink, and helpLink
+
     function loadContent(page) {
         const contentDiv = document.getElementById('content');
-        contentDiv.innerHTML = `You clicked on the ${page} link.`;
+        contentDiv.innerHTML = `We apologize for any inconvenience.Thank you for your positive feedback! ${page} link.`;
     }
 
     function loadSocialMedia(platform) {
         const socialMediaContentDiv = document.getElementById('socialMediaContent');
-        socialMediaContentDiv.innerHTML = `You clicked on the ${platform} link.`;
+        socialMediaContentDiv.innerHTML = `We apologize for any inconvenience.Thank you for your positive feedback! ${platform} link.`;
     }
 
     function makePositiveDecision() {
@@ -174,21 +193,6 @@ document.addEventListener('DOMContentLoaded', function () {
         displayNegativeWarning();
     }
 
-    function displayPositiveMessage() {
-        const positiveMessage = document.createElement('p');
-        positiveMessage.textContent = 'Thank you for your positive feedback!';
-        positiveMessage.style.color = 'green';
-        const messageContainer = document.getElementById('messageContainer');
-        messageContainer.appendChild(positiveMessage);
-    }
-
-    function displayNegativeWarning() {
-        const warningMessage = document.createElement('p');
-        warningMessage.textContent = 'We apologize for any inconvenience. Please contact us for further assistance.';
-        warningMessage.style.color = 'red';
-        const messageContainer = document.getElementById('messageContainer');
-        messageContainer.appendChild(warningMessage);
-    }
 });
    
 
